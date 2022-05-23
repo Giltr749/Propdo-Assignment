@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
 import ListingContext from '../contexts/ListingsContext';
 import Listing from './Listing';
+import '../style/MainCard.css';
 
-function Card(props) {
+function MainCard(props) {
 
     const [propertiesData, setPropertiesData] = useContext(ListingContext);
 
     return (
-        <div>
+        <div className='main-card'>
            {propertiesData && propertiesData.map((value, i)=>{
                return <Listing property={value} key={i}/>
            })} 
@@ -15,4 +16,4 @@ function Card(props) {
     );
 }
 
-export default Card;
+export default MainCard;

@@ -1,10 +1,10 @@
 import React from 'react';
-import Card from '../Components/Card';
+import MainCard from '../Components/MainCard';
 
 function RealEstate(props) {
     
     return (
-       <Card/>
+       <MainCard/>
     );
 }
 
