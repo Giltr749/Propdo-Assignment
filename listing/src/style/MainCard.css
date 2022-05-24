@@ -1,7 +1,7 @@
 .main-card {
-    width: 80%;
+    width: 50%;
     position: absolute;
-    left: 10%;
+    left: 25%;
     -webkit-box-shadow: 5px 5px 15px 5px #000000;
     box-shadow: 5px 5px 15px 5px #000000;
     padding: 0 1rem;

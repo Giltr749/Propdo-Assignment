@@ -1,0 +1,11 @@
+.search-div {
+    position: fixed;
+    width: 20%;
+    left: 2.5%;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.inner-div {
+    width: 100%;
+}
