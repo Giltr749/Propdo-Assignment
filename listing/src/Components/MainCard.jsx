@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import ListingContext from '../contexts/ListingsContext';
 import Listing from './Listing';
 import '../style/MainCard.css';
-import SearchInput from './SearchInput';
 
 function MainCard(props) {
 

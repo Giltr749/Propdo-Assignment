@@ -5,17 +5,17 @@ import '../style/SearchInput.css';
 function SearchInput(props) {
 
     useEffect(() => {
-        console.log(props);
+        // console.log(props);
     }, [])
 
     const handlePrice = (e) => {
         props.price.setPriceAscend(e.target.value);
-        console.log(props.price.priceAscend);
+        // console.log(props.price.priceAscend);
     };
 
     const handleRooms = (e) => {
         props.rooms.setRoomsInput(e.target.value);
-        console.log(props.rooms.roomsInput);
+        // console.log(props.rooms.roomsInput);
     };
 
     const handleAddress = (e) => {
