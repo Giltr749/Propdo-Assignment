@@ -5,13 +5,13 @@ import { useState } from "react";
 import properties from "./jsons/transactions.json";
 
 function App() {
-  const [propertiesData, setPropertiesData] = useState(properties.properties);
+    const [propertiesData, setPropertiesData] = useState(properties.properties);
 
-  return (
-    <ListingContext.Provider value={[propertiesData, setPropertiesData]}>
-      <RealEstate />
-    </ListingContext.Provider>
-  );
+    return (
+        <ListingContext.Provider value={[propertiesData, setPropertiesData]}>
+            <RealEstate />
+        </ListingContext.Provider>
+    );
 }
 
 
