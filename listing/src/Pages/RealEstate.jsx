@@ -4,6 +4,9 @@ import { useState, useContext } from 'react';
 import SearchInput from '../Components/SearchInput';
 import ListingContext from '../contexts/ListingsContext';
 import FixedPropertiesContext from '../contexts/FixedPropertiesContext';
+import Button from '@mui/material/Button';
+import '../style/RealEstate.css';
+import {useNavigate} from 'react-router-dom';
 
 function RealEstate(props) {
 
@@ -13,6 +16,8 @@ function RealEstate(props) {
     const [addressInput, setAddressInput] = useState('');
     const [roomsInput, setRoomsInput] = useState(0);
     const [priceAscend, setPriceAscend] = useState(false);
+
+    const navigate = useNavigate();
 
     const toUnicode = (str) => {
         var result = '';
@@ -64,9 +69,16 @@ function RealEstate(props) {
 
     }, [roomsInput, addressInput, priceAscend])
 
+    const handleRedirect = () =>{
+        navigate('/map');
+    }
+
     return (
         <div>
             <SearchInput address={{ addressInput, setAddressInput }} rooms={{ roomsInput, setRoomsInput }} price={{ priceAscend, setPriceAscend }} />
+            <div className='btn-div'>
+            <Button className = "map-btn" variant="outlined" onClick={handleRedirect}>Go to Map</Button>
+            </div>
             <MainCard />
         </div>
     );

@@ -1,8 +1,9 @@
 .search-div {
     position: fixed;
     width: 20%;
-    left: 2.5%;
-    margin-top: 1.5rem;
+    height: 40%;
+    left: 5%;
+    top: 3%;
     overflow: hidden;
 }
 

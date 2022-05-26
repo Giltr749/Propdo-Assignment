@@ -1,0 +1,13 @@
+.map-btn {
+    width: 60%;
+    left: 20%;
+}
+
+.btn-div {
+    overflow: hidden;
+    position: fixed;
+    width: 20%;
+    left: 2.5%;
+    top: 40%;
+    margin-top: 1.5rem;
+}
