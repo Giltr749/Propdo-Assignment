@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Propdo-Assignment/static/css/main.2b2a5951.css",
-    "main.js": "/Propdo-Assignment/static/js/main.779e4901.js",
+    "main.css": "/Propdo-Assignment/static/css/main.906cc79d.css",
+    "main.js": "/Propdo-Assignment/static/js/main.b7849960.js",
     "static/js/787.40f46146.chunk.js": "/Propdo-Assignment/static/js/787.40f46146.chunk.js",
     "static/media/prop5.jpg": "/Propdo-Assignment/static/media/prop5.5443ddc61575a10be47d.jpg",
     "static/media/prop4.jpg": "/Propdo-Assignment/static/media/prop4.c4f4a45ebdb56d009882.jpg",
     "static/media/prop2.jpg": "/Propdo-Assignment/static/media/prop2.50c13386d9ab1a78c0c4.jpg",
     "index.html": "/Propdo-Assignment/index.html",
-    "main.2b2a5951.css.map": "/Propdo-Assignment/static/css/main.2b2a5951.css.map",
-    "main.779e4901.js.map": "/Propdo-Assignment/static/js/main.779e4901.js.map",
+    "main.906cc79d.css.map": "/Propdo-Assignment/static/css/main.906cc79d.css.map",
+    "main.b7849960.js.map": "/Propdo-Assignment/static/js/main.b7849960.js.map",
     "787.40f46146.chunk.js.map": "/Propdo-Assignment/static/js/787.40f46146.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2b2a5951.css",
-    "static/js/main.779e4901.js"
+    "static/css/main.906cc79d.css",
+    "static/js/main.b7849960.js"
   ]
 }
