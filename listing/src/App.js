@@ -1,9 +1,12 @@
 import "./App.css";
 import RealEstate from "./Pages/RealEstate";
+import Map from "./Pages/Map";
 import ListingContext from "./contexts/ListingsContext";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import properties from "./jsons/transactions.json";
 import FixedPropertiesContext from "./contexts/FixedPropertiesContext";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+
 
 function App() {
     const [propertiesData, setPropertiesData] = useState(properties.properties);
@@ -13,7 +16,13 @@ function App() {
     return (
         <FixedPropertiesContext.Provider value={[fixedData, setFixedData]}>
             <ListingContext.Provider value={[propertiesData, setPropertiesData]}>
-                <RealEstate />
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<RealEstate />} />
+                        <Route path="/map" element={<Map />} />
+
+                    </Routes>
+                </BrowserRouter>
             </ListingContext.Provider>
         </FixedPropertiesContext.Provider>
     );

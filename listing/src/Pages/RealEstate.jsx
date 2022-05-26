@@ -11,11 +11,10 @@ function RealEstate(props) {
     const [fixedData, setFixedData] = useContext(FixedPropertiesContext);
 
     const [addressInput, setAddressInput] = useState('');
-    const [roomsInput, setRoomsInput] = useState(1);
-    const [priceAscend, setPriceAscend] = useState(true);
+    const [roomsInput, setRoomsInput] = useState(0);
+    const [priceAscend, setPriceAscend] = useState(false);
 
     const toUnicode = (str) => {
-        
         var result = '';
         for (let i = 0; i < str.length; i++) {
             result += '\\u' + ('0' + str[i].charCodeAt(0).toString(16)).substring(-4);
@@ -23,9 +22,21 @@ function RealEstate(props) {
         return result;
     }
 
-    //Sorts according to price ascending/descending
     useEffect(() => {
-        let tempArr = propertiesData;
+
+        let tempArr = fixedData;
+
+        //Filters according to search input
+        if (addressInput.length !== 0) {
+            tempArr = propertiesData.filter((property) => {
+                return (JSON.parse(`"${property.address}"`).includes(addressInput));
+            });
+            setPropertiesData(tempArr);
+        }
+        else
+            setPropertiesData(fixedData);
+
+        //Sorts according to price ascending/descending
         priceAscend
             ? tempArr.sort((a, b) => {
                 if (a.price < b.price)
@@ -41,24 +52,17 @@ function RealEstate(props) {
                     return -1;
                 return 0;
             })
-
         setPropertiesData(tempArr);
-    }, [priceAscend])
 
-    //Filters according to seatch input
-    useEffect(() => {
-
-        const temp = toUnicode(addressInput);
-        let tempArr = fixedData;
-        if (addressInput.length !== 0) {
-            tempArr = fixedData.filter((property) => {
-                return (JSON.parse(`"${property.address}"`).includes(addressInput));
-            })
-            setPropertiesData(tempArr);
+        //Filters according to number of rooms
+        if (roomsInput != 0) {
+            tempArr = propertiesData.filter((property) => {
+                return (property.num_rooms == roomsInput);
+            });
         }
-        else
-            setPropertiesData(fixedData);
-    }, [addressInput])
+        setPropertiesData(tempArr);
+
+    }, [roomsInput, addressInput, priceAscend])
 
     return (
         <div>

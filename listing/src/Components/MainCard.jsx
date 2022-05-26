@@ -6,12 +6,14 @@ import '../style/MainCard.css';
 function MainCard(props) {
 
     const [propertiesData, setPropertiesData] = useContext(ListingContext);
-    
+
     return (
         <div className='main-card'>
-           {propertiesData && propertiesData.map((value, i)=>{
-               return <Listing property={value} key={i}/>
-           })} 
+            {propertiesData && propertiesData.map((value, i) => {
+                if (propertiesData.length !== 0)
+                    return <Listing property={value} key={i} />
+                {<h3>{'No Listings Found'}</h3>}
+            })}
         </div>
     );
 }

@@ -32,12 +32,13 @@ function SearchInput(props) {
                             />
                             <InputLabel id="rooms">Number of rooms:</InputLabel>
                             <Select
-                                value={1}
+                                value={props.rooms.roomsInput}
                                 label="Rooms"
                                 onChange={handleRooms}
                                 label="rooms"
                                 fullWidth
                             >
+                                <MenuItem value={0}>All</MenuItem>
                                 <MenuItem value={1}>1</MenuItem>
                                 <MenuItem value={2}>2</MenuItem>
                                 <MenuItem value={3}>3</MenuItem>
