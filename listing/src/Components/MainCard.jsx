@@ -6,10 +6,6 @@ import '../style/MainCard.css';
 function MainCard(props) {
 
     const [propertiesData, setPropertiesData] = useContext(ListingContext);
-
-    // useEffect(()=>{
-    //     console.log(propertiesData[0].address);
-    // },[])
     
     return (
         <div className='main-card'>

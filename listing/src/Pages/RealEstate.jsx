@@ -20,7 +20,6 @@ function RealEstate(props) {
         for (let i = 0; i < str.length; i++) {
             result += '\\u' + ('0' + str[i].charCodeAt(0).toString(16)).substring(-4);
         }
-        console.log(result);
         return result;
     }
 
@@ -50,7 +49,6 @@ function RealEstate(props) {
     useEffect(() => {
 
         const temp = toUnicode(addressInput);
-        // console.log(JSON.parse(`"${test}"`));
         let tempArr = fixedData;
         if (addressInput.length !== 0) {
             tempArr = fixedData.filter((property) => {
@@ -60,7 +58,6 @@ function RealEstate(props) {
         }
         else
             setPropertiesData(fixedData);
-        console.log(propertiesData);
     }, [addressInput])
 
     return (

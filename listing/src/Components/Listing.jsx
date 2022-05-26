@@ -16,10 +16,6 @@ function Listing(props) {
         return randomNum;
     }
 
-    // useEffect(()=>{
-    //     console.log(props.property.address);
-    // },[])
-
     return (
         <div className='main-div'>
             <div className='img-div'>
