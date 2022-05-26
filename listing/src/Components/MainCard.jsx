@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import ListingContext from '../contexts/ListingsContext';
 import Listing from './Listing';
 import '../style/MainCard.css';
@@ -6,6 +6,10 @@ import '../style/MainCard.css';
 function MainCard(props) {
 
     const [propertiesData, setPropertiesData] = useContext(ListingContext);
+
+    // useEffect(()=>{
+    //     console.log(propertiesData[0].address);
+    // },[])
     
     return (
         <div className='main-card'>

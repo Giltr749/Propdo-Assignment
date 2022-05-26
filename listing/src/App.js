@@ -1,16 +1,21 @@
 import "./App.css";
 import RealEstate from "./Pages/RealEstate";
 import ListingContext from "./contexts/ListingsContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import properties from "./jsons/transactions.json";
+import FixedPropertiesContext from "./contexts/FixedPropertiesContext";
 
 function App() {
     const [propertiesData, setPropertiesData] = useState(properties.properties);
+    const [fixedData, setFixedData] = useState(properties.properties);
+
 
     return (
-        <ListingContext.Provider value={[propertiesData, setPropertiesData]}>
-            <RealEstate />
-        </ListingContext.Provider>
+        <FixedPropertiesContext.Provider value={[fixedData, setFixedData]}>
+            <ListingContext.Provider value={[propertiesData, setPropertiesData]}>
+                <RealEstate />
+            </ListingContext.Provider>
+        </FixedPropertiesContext.Provider>
     );
 }
 
