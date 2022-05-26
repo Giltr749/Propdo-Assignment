@@ -18,7 +18,7 @@ function App() {
             <ListingContext.Provider value={[propertiesData, setPropertiesData]}>
                 <BrowserRouter>
                     <Routes>
-                        <Route path="/" element={<RealEstate />} />
+                        <Route path="/Propdo-Assignment" element={<RealEstate />} />
                         <Route path="/map" element={<Map />} />
 
                     </Routes>
